@@ -30,7 +30,18 @@
 */
 
 //Code Here
-
+class Employee {
+  constructor (fN, lN, e, a){
+    this.first_name = fN;
+    this.last_name = lN;
+    this.email = e;
+    this.age = a;
+  }
+  makeWidget () {
+    return this.first_name + ' ' + this.last_name + " Widget"
+  }
+}
+let dave = new Employee('Dave', 'Smith')
 
 
 ////////// PROBLEM 2 //////////
@@ -50,7 +61,25 @@
 */
 
 //Code Here
-
+class Manager {
+  constructor (fN, lN, e, a){
+    this.first_name = fN;
+    this.last_name = lN;
+    this.email = e;
+    this.age = a;
+    this.reports = [];
+  }
+  hire (employee) {
+    return this.reports.push(employee);
+  }
+  fire (index) {
+    return this.reports.splice(index, 1)
+  }
+  makeWidget () {
+    return this.first_name + ' ' + this.last_name + " Widget"
+  }
+}
+let me = new Manager('Douglas', 'Caswell', 'dcaswell@place.com', 27);
 
 
 ////////// PROBLEM 3 //////////
