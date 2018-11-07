@@ -118,8 +118,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -160,7 +160,9 @@ var myCar = {
 */
 
 //Code Here
-
+function recordCleaner () {
+myCar.accidents.forEach(e => e.atFaultForAccident = false)
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -179,5 +181,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
-
+function looper () {
+  for (i = 0; i < numsArr.length; i++) {
+    for (j = 0; j < numsArr[i].length; j++) {
+      if (numsArr[i][j] % 2 === 0) {
+        numsArr[i].splice(j, 1, "even")
+      }
+      else if (numsArr[i][j] % 2 === 1) {
+        numsArr[i].splice(j, 1, "odd") 
+      }
+    }
+  }
+  return numsArr;
+}
